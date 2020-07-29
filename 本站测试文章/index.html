@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>本站测试文章 | 张狂的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="第七章 异常和文件异常程序在运行过程当中，不可避免的会出现一些错误，比如：     使用了没有赋值过的变量     使用了不存在的索引     除0     ... 这些错误在程序中，我们称其为异常。 程序运行过程中，一旦出现异常将会导致程序立即终止，异常以后的代码全部都不会执行！     处理异常程序运行时出现异常，目的并不是让我们的程序直接终止！ Python是希望在出现异常时，我们可以编写代">
+<meta property="og:type" content="article">
+<meta property="og:title" content="本站测试文章">
+<meta property="og:url" content="http://www.zkuang.cool/%E6%9C%AC%E7%AB%99%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/index.html">
+<meta property="og:site_name" content="张狂的博客">
+<meta property="og:description" content="第七章 异常和文件异常程序在运行过程当中，不可避免的会出现一些错误，比如：     使用了没有赋值过的变量     使用了不存在的索引     除0     ... 这些错误在程序中，我们称其为异常。 程序运行过程中，一旦出现异常将会导致程序立即终止，异常以后的代码全部都不会执行！     处理异常程序运行时出现异常，目的并不是让我们的程序直接终止！ Python是希望在出现异常时，我们可以编写代">
+<meta property="og:locale" content="zh_CH">
+<meta property="article:published_time" content="2020-07-29T12:50:43.000Z">
+<meta property="article:modified_time" content="2020-07-29T12:51:39.659Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="张狂的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">张狂的博客</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.zkuang.cool"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-本站测试文章" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/%E6%9C%AC%E7%AB%99%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/index.html" class="article-date">
+  <time datetime="2020-07-29T12:50:43.000Z" itemprop="datePublished">2020-07-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      本站测试文章
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="第七章-异常和文件"><a href="#第七章-异常和文件" class="headerlink" title="第七章 异常和文件"></a>第七章 异常和文件</h1><h2 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h2><pre><code>程序在运行过程当中，不可避免的会出现一些错误，比如：
+    使用了没有赋值过的变量
+    使用了不存在的索引
+    除0
+    ...
+这些错误在程序中，我们称其为异常。
+程序运行过程中，一旦出现异常将会导致程序立即终止，异常以后的代码全部都不会执行！    </code></pre>
+<h2 id="处理异常"><a href="#处理异常" class="headerlink" title="处理异常"></a>处理异常</h2><pre><code>程序运行时出现异常，目的并不是让我们的程序直接终止！
+Python是希望在出现异常时，我们可以编写代码来对异常进行处理！    
+
+try语句
+    try:
+        代码块（可能出现错误的语句）
+    except 异常类型 as 异常名:
+        代码块（出现错误以后的处理方式）
+    except 异常类型 as 异常名:
+        代码块（出现错误以后的处理方式）
+    except 异常类型 as 异常名:
+        代码块（出现错误以后的处理方式）
+    else：
+        代码块（没出错时要执行的语句）    
+    finally:
+        代码块（该代码块总会执行）    
+
+    try是必须的 else语句有没有都行
+    except和finally至少有一个    
+
+可以将可能出错的代码放入到try语句，这样如果代码没有错误，则会正常执行，
+    如果出现错误，则会执行expect子句中的代码，这样我们就可以通过代码来处理异常
+    避免因为一个异常导致整个程序的终止            </code></pre>
+<h2 id="异常的传播（抛出异常）"><a href="#异常的传播（抛出异常）" class="headerlink" title="异常的传播（抛出异常）"></a>异常的传播（抛出异常）</h2><pre><code>当在函数中出现异常时，如果在函数中对异常进行了处理，则异常不会再继续传播,
+    如果函数中没有对异常进行处理，则异常会继续向函数调用处传播,
+    如果函数调用处处理了异常，则不再传播，如果没有处理则继续向调用处传播
+    直到传递到全局作用域（主模块）如果依然没有处理，则程序终止，并且显示异常信息
+
+当程序运行过程中出现异常以后，所有的异常信息会被保存一个专门的异常对象中，
+    而异常传播时，实际上就是异常对象抛给了调用处
+    比如 ： ZeroDivisionError类的对象专门用来表示除0的异常
+            NameError类的对象专门用来处理变量错误的异常
+            ....
+
+在Python为我们提供了多个异常对象            </code></pre>
+<h2 id="抛出异常"><a href="#抛出异常" class="headerlink" title="抛出异常"></a>抛出异常</h2><pre><code>- 可以使用 raise 语句来抛出异常，
+    raise语句后需要跟一个异常类 或 异常的实例</code></pre>
+<h2 id="文件（File）"><a href="#文件（File）" class="headerlink" title="文件（File）"></a>文件（File）</h2><pre><code>- 通过Python程序来对计算机中的各种文件进行增删改查的操作
+- I/O(Input / Output)
+- 操作文件的步骤：
+    ① 打开文件
+    ② 对文件进行各种操作（读、写），然后保存
+    ③ 关闭文件</code></pre>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.zkuang.cool/%E6%9C%AC%E7%AB%99%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/index.html" data-id="ckd7gm5m70001cowdfznod9jd" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/hello-world/index.html" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/%E6%9C%AC%E7%AB%99%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/index.html">本站测试文章</a>
+          </li>
+        
+          <li>
+            <a href="/hello-world/index.html">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
